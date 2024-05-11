@@ -11,7 +11,7 @@ import plotly.express as px
 def api_connect():
     api_service_name = 'youtube'
     api_version = 'v3'
-    api_key = 'AIzaSyDvxNZIcVm4sIrzsT19dYTnbee1qk5aXX4' 
+    api_key = ' ' 
     youtube = build(api_service_name,api_version,developerKey=api_key)
     return youtube
 youtube = api_connect()
@@ -20,7 +20,7 @@ youtube = api_connect()
 myDb = mysql.connector.connect(
     host = 'localhost', #SQL connection requirements
     user = 'root', 
-    password = 'Arjunkutty22@', 
+    password = '', 
     database = 'yt_data_cap1'
 )
 myCursor = myDb.cursor()
