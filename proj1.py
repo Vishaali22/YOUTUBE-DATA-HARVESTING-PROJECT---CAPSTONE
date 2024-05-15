@@ -108,10 +108,6 @@ def get_video_details(video_ids):
                 duration = item['contentDetails'].get('duration') ,                
                 thumbnail = item['snippet']['thumbnails']['default']['url'],                
                 caption_status = item['contentDetails'].get('caption')                
-                #definition = item['contentDetails'].get('definition'),
-                #tags = item['snippet'].get('tags')
-                #channel_name = item['snippet']['channelTitle'],
-                #channel_id = item['snippet'].get('channelId'),
             )
             date_string = data['published_date'] 
             date_string = changeDateFormat(date_string)
@@ -140,7 +136,6 @@ def get_playlist_details(channel_id):
                 channel_id = item['snippet'].get('channelId'),
                 playlist_name = item['snippet'].get('title'),
                 video_count = item['contentDetails'].get('itemCount')
-                #published_date = item['snippet'].get('publishedAt')
                 )
             playlist_details.append(data)
         nextPageToken = response.get('nextPageToken')
